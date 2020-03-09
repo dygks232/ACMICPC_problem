@@ -85,7 +85,8 @@ void bfs()
 
 void solve()
 {
-	bfs();
+	if(N != K)
+		bfs();
 }
 
 void output()
