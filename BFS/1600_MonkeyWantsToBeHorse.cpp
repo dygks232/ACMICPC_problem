@@ -117,7 +117,7 @@ void inputAndInit()
 	cin >> K >> C >> R;
 	answer = WRONG_ANSWER;
 	inputMap.assign(R, vector<bool>(C, false));
-	for(int i = 0; i < MAX_MOVE_HORSE; i++)
+	for (int i = 0; i < MAX_MOVE_HORSE; i++)
 		visit[i].assign(R, vector<bool>(C, false));
 	for (int i = 0; i < R; i++)
 		for (int j = 0; j < C; j++)
@@ -130,7 +130,10 @@ void inputAndInit()
 
 void solve()
 {
-	bfs();
+	if (R > 1 || C > 1)
+		bfs();
+	else
+		answer = 0;
 }
 
 void output()
